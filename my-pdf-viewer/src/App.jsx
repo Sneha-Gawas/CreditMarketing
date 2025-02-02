@@ -18,7 +18,8 @@ const App = () => {
 
   // Load the PDF URL when the component mounts
   useEffect(() => {
-    setPdfUrl("https://creditmarketing.onrender.com/api/view-pdf"); // Replace with the actual server URL for production
+    const a=import.meta.env.url
+    setPdfUrl({a}); // Replace with the actual server URL for production
   }, []);
 
   return (
