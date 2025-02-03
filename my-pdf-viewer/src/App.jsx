@@ -18,8 +18,8 @@ const App = () => {
 
   // Load the PDF URL when the component mounts
   useEffect(() => {
-    if (window.env && window.env.VITE_PDF_URL) {
-      setPdfUrl(`${window.env.VITE_PDF_URL}/api/view-pdf`);
+    if (window.env && window.env.VITE_url) {
+      setPdfUrl(`${window.env.VITE_url}/api/view-pdf`);
     }
   }, []);
   
