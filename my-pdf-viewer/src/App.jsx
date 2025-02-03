@@ -18,9 +18,11 @@ const App = () => {
 
   // Load the PDF URL when the component mounts
   useEffect(() => {
-    const a=import.meta.env.VITE_url
-    setPdfUrl(a); // Replace with the actual server URL for production
+    if (window.env && window.env.VITE_PDF_URL) {
+      setPdfUrl(`${window.env.VITE_PDF_URL}/api/view-pdf`);
+    }
   }, []);
+  
 
   return (
     <Container className="mt-4">
